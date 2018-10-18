@@ -2,6 +2,9 @@
 // Variables
 @import "variables";
 
+// Topics body
+@import "topic_body";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -10,6 +13,21 @@
 
 body {
     font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
+}
+
+/* Topic Show Page */
+
+.topics-show-page {
+
+    .panel {
+        padding: 15px;
+
+        h1 {
+            margin: 0.4em auto 0.6em;
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
 }
 
 /* header */
