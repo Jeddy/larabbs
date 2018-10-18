@@ -12,7 +12,7 @@
                 <div class="media-body">
 
                     <div class="media-heading">
-                        <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
+                        <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
                             {{ $topic->title }}
                         </a>
                         <a class="pull-right" href="{{ route('topics.show', [$topic->id]) }}" >
@@ -28,7 +28,7 @@
                         </a>
 
                         <span> • </span>
-                        <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{ $topic->user->name }}">
+                        <a href="{{ $topic->link() }}" title="{{ $topic->user->name }}">
                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                             {{ $topic->user->name }}
                         </a>
