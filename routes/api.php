@@ -10,7 +10,7 @@ $api->version('v1', [
 
 	$api->group([
 		'middleware' => 'api.throttle', // 接口节流
-        'limit' => config('api.rate_limits.sign.limit'),,  // 1分钟1次
+        'limit' => config('api.rate_limits.sign.limit'),  // 1分钟1次
         'expires' => config('api.rate_limits.sign.expires'),
 	], function($api) {
 		// 短信验证码
@@ -19,6 +19,9 @@ $api->version('v1', [
 		// 用户注册
 		$api->post('users', 'UsersController@store')
 		    ->name('api.users.store');
+		// 图片验证码
+		$api->post('captchas', 'CaptchasController@store')
+		    ->name('api.captchas.store');
 	});
 
 });
